@@ -4,12 +4,14 @@
 #
 Name     : mvn-genesis
 Version  : 2.0
-Release  : 1
+Release  : 2
 URL      : https://github.com/apache/geronimo-genesis/archive/genesis-2.0.tar.gz
 Source0  : https://github.com/apache/geronimo-genesis/archive/genesis-2.0.tar.gz
 Source1  : https://repo1.maven.org/maven2/org/apache/geronimo/genesis/genesis-default-flava/2.0/genesis-default-flava-2.0.pom
 Source2  : https://repo1.maven.org/maven2/org/apache/geronimo/genesis/genesis-java5-flava/2.0/genesis-java5-flava-2.0.pom
-Source3  : https://repo1.maven.org/maven2/org/apache/geronimo/genesis/genesis/2.0/genesis-2.0.pom
+Source3  : https://repo1.maven.org/maven2/org/apache/geronimo/genesis/genesis-java5-flava/2.1/genesis-java5-flava-2.1.pom
+Source4  : https://repo1.maven.org/maven2/org/apache/geronimo/genesis/genesis-java5-flava/2.2/genesis-java5-flava-2.2.pom
+Source5  : https://repo1.maven.org/maven2/org/apache/geronimo/genesis/genesis/2.0/genesis-2.0.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -37,8 +39,14 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/apache/geronimo/gen
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/geronimo/genesis/genesis-java5-flava/2.0
 cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/apache/geronimo/genesis/genesis-java5-flava/2.0
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/geronimo/genesis/genesis-java5-flava/2.1
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/apache/geronimo/genesis/genesis-java5-flava/2.1
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/geronimo/genesis/genesis-java5-flava/2.2
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/apache/geronimo/genesis/genesis-java5-flava/2.2
+
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/geronimo/genesis/genesis/2.0
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/apache/geronimo/genesis/genesis/2.0
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/apache/geronimo/genesis/genesis/2.0
 
 
 %files
@@ -48,4 +56,6 @@ cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/apache/geronimo/gen
 %defattr(-,root,root,-)
 /usr/share/java/.m2/repository/org/apache/geronimo/genesis/genesis-default-flava/2.0/genesis-default-flava-2.0.pom
 /usr/share/java/.m2/repository/org/apache/geronimo/genesis/genesis-java5-flava/2.0/genesis-java5-flava-2.0.pom
+/usr/share/java/.m2/repository/org/apache/geronimo/genesis/genesis-java5-flava/2.1/genesis-java5-flava-2.1.pom
+/usr/share/java/.m2/repository/org/apache/geronimo/genesis/genesis-java5-flava/2.2/genesis-java5-flava-2.2.pom
 /usr/share/java/.m2/repository/org/apache/geronimo/genesis/genesis/2.0/genesis-2.0.pom
