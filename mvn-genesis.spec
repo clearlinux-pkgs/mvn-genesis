@@ -4,7 +4,7 @@
 #
 Name     : mvn-genesis
 Version  : 2.0
-Release  : 4
+Release  : 5
 URL      : https://github.com/apache/geronimo-genesis/archive/genesis-2.0.tar.gz
 Source0  : https://github.com/apache/geronimo-genesis/archive/genesis-2.0.tar.gz
 Source1  : https://repo.maven.apache.org/maven2/org/apache/geronimo/genesis/genesis-default-flava/2.1/genesis-default-flava-2.1.pom
